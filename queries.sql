@@ -20,4 +20,6 @@ DROP TABLE job;
 -- Part 4: Test it with SQL
 SELECT name, description
 FROM skill
-inner JOIN job_skills ON job_skills.skills_id = skill.id;
+inner JOIN job_skills ON job_skills.skills_id = skill.id
+where job_skills.jobs_id is not null
+ORDER BY name ASC;
